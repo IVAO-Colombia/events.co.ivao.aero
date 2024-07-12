@@ -4,8 +4,10 @@ namespace App\Http\Livewire\Website;
 
 use App\Models\BookingAtc;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 
+#[Layout('website.rfo24.template')]
 class AtcBooking extends Component
 {
     public $facilitys,
@@ -38,11 +40,11 @@ class AtcBooking extends Component
 
 
         $this->facilitys = [
-            ['rating' => 4, 'name' => 'SKBO_DEL'],
-            ['rating' => 5, 'name' => 'SKBO_S_GND'],
-            ['rating' => 5, 'name' => 'SKBO_N_GND'],
-            ['rating' => 5, 'name' => 'SKBO_TWR'],
-            ['rating' => 6, 'name' => 'SKBO_APP'],
+            ['rating' => 4, 'name' => 'SKRG_DEL'],
+            ['rating' => 5, 'name' => 'SKRG_GND'],
+            ['rating' => 5, 'name' => 'SKRG_TWR'],
+            ['rating' => 6, 'name' => 'SKMD_S_APP'],
+            ['rating' => 6, 'name' => 'SKMD_N_APP'],
             ['rating' => 7, 'name' => 'SKED_CTR'],
         ];
 
@@ -53,9 +55,9 @@ class AtcBooking extends Component
         }
 
 
-        return view('website.rfe23.booking.atc', [
+        return view('website.rfo24.booking.atc', [
             'bookings' => $this->facilitybooks,
-        ])->extends('website.rfe23.template');
+        ]);
     }
 
     public function closeModal()

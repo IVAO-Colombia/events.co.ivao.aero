@@ -4,11 +4,14 @@ namespace App\Http\Livewire\Website;
 
 use App\Models\Flights;
 use Illuminate\Support\Facades\Auth;
+use Livewire\Attributes\Layout;
 use Livewire\Component;
 
+#[Layout('website.rfo24.template')]
 class Flight extends Component
 {
 
+    public $flightModel;
     public $flight_id,
         $flight,
         $airline,
@@ -31,11 +34,11 @@ class Flight extends Component
     {
         $flights = new Flights;
 
-        return view('website.rfe23.booking.flights', [
-            'departureFlights' => $flights->getDepartureFlights("SKBO"),
-            'arrivalFlights' => $flights->getArrivalFlights("SKBO"),
+        return view('website.rfo24.booking.flights', [
+            'departureFlights' => $flights->getDepartureFlights("SKRG"),
+            'arrivalFlights' => $flights->getArrivalFlights("SKRG"),
             'flights' => Flights::all(),
-        ])->extends('website.rfe23.template');
+        ]);
     }
 
 
@@ -70,19 +73,19 @@ class Flight extends Component
 
     public function showConfirm($id)
     {
-        $flight = Flights::findOrFail($id);
+        $this->flightModel = Flights::findOrFail($id);
 
         $this->flight_id = $id;
-        $this->flight = $flight->flight;
-        $this->airline = $flight->airline;
-        $this->aircraft = $flight->aircraft;
-        $this->departure = $flight->departure;
-        $this->departure_gate = $flight->departure_gate;
-        $this->destination = $flight->destination;
-        $this->destination_gate = $flight->destination_gate;
-        $this->departure_time = $flight->departure_time;
-        $this->arrival_time = $flight->arrival_time;
-        $this->information = $flight->information;
+        $this->flight = $this->flightModel->flight;
+        $this->airline = $this->flightModel->airline;
+        $this->aircraft = $this->flightModel->aircraft;
+        $this->departure = $this->flightModel->departure;
+        $this->departure_gate = $this->flightModel->departure_gate;
+        $this->destination = $this->flightModel->destination;
+        $this->destination_gate = $this->flightModel->destination_gate;
+        $this->departure_time = $this->flightModel->departure_time;
+        $this->arrival_time = $this->flightModel->arrival_time;
+        $this->information = $this->flightModel->information;
 
         $this->openModal();
     }

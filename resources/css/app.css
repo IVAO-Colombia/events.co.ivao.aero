@@ -5,3 +5,20 @@
 [x-cloak] {
     display: none;
 }
+*,
+*:hover {
+    scrollbar-color: auto;
+}
+
+#nav-home {
+    transition: all 300ms;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0d2c99;
+    border-radius: 15px;
+}

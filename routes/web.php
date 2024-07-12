@@ -7,12 +7,17 @@ use App\Http\Controllers\{
     HomeController,
     IvaoController,
 };
-
-use App\Http\Livewire\Website\{
-    Flight,
-    Profile,
-    AtcBooking,
-};
+use App\Http\Livewire\Website\AtcBooking;
+use App\Http\Livewire\Website\Flight;
+use App\Http\Livewire\Website\Home;
+use App\Http\Livewire\Website\Profile;
+use App\Http\Livewire\Website\Stats;
+// use App\Http\Livewire\Website\{
+//     Flight,
+//     Profile,
+//     AtcBooking,
+//     Home,
+// };
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
@@ -28,12 +33,12 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name("home");
+Route::get('/', Home::class)->name("home");
 
 Route::get("locale/{locale}", function ($locale) {
     Session::put("locale", $locale);
     return redirect()->back();
-});
+})->name('locale');
 
 
 Route::prefix('booking')->group(function () {
@@ -42,9 +47,7 @@ Route::prefix('booking')->group(function () {
     Route::get('atc', AtcBooking::class)
         ->name('booking.atc')
         ->middleware(['auth']);
-    Route::get('stats', function () {
-        return view('website.rfe23.statics.view');
-    })->name('booking.stats');
+    Route::get('stats', Stats::class)->name('booking.stats');
 });
 
 

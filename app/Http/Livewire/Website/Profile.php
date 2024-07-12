@@ -5,8 +5,10 @@ namespace App\Http\Livewire\Website;
 use App\Models\BookingAtc;
 use App\Models\Flights;
 use Illuminate\Support\Facades\Auth;
-
+use Livewire\Attributes\Layout;
 use Livewire\Component;
+
+#[Layout('website.rfo24.template')]
 
 class Profile extends Component
 {
@@ -14,10 +16,10 @@ class Profile extends Component
     {
         $flights = new Flights;
         $atc = new BookingAtc;
-        return view('website.rfe23.profile.view', [
+        return view('website.rfo24.profile.view', [
             "flights" => $flights->getBookingByVID(Auth::user()->vid),
             "bookingsAtc" => $atc->getBookingByVID(Auth::user()->id),
-        ])->extends('website.rfe23.template');
+        ]);
     }
 
     public function unbookAtc($id)
@@ -26,7 +28,7 @@ class Profile extends Component
         if ($position->user_id == Auth::user()->id) {
             $position->user_id = null;
             $position->save();
-            $this->emit("OpenSweetalert", "Unbooked successfully!");
+            $this->dispatch("OpenSweetalert", "Unbooked successfully!");
         }
     }
 
@@ -36,7 +38,7 @@ class Profile extends Component
         if ($flight->user_id == Auth::user()->vid) {
             $flight->user_id = null;
             $flight->save();
-            $this->emit("OpenSweetalert", "Unbooked successfully!");
+            $this->dispatch("OpenSweetalert", "Unbooked successfully!");
         }
     }
 }

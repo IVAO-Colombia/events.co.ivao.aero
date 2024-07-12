@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,6 +23,25 @@ class Flights extends Model
         } else {
             return mb_substr($this->flight, 0, 3);
         }
+    }
+
+    public function getFlightNumer()
+    {
+        preg_match_all('/\d+/', $this->flight, $matches);
+
+        return implode(",", $matches[0]) ?? null;
+    }
+
+    public function getDeparturetHour()
+    {
+        $time = Carbon::parse($this->departure_time);
+        return $time->hour;
+    }
+
+    public function getDeparturetMinute()
+    {
+        $time = Carbon::parse($this->departure_time);
+        return $time->minute;
     }
 
     public function getArrivalFlights(String $airport)

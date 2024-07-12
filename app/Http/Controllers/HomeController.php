@@ -9,6 +9,6 @@ class HomeController extends Controller
     public function index()
     {
 
-        return view('website/rfe23/index', []);
+        return view('website/rfo24/index', []);
     }
 }

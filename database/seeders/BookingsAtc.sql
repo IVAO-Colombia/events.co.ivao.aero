@@ -7,324 +7,377 @@ INSERT INTO
         `order`
     )
 VALUES (
-        'SKBO_DEL',
+        'SKRG_DEL',
         '15:00:00',
         '16:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_DEL',
+    ),
+    (
+        'SKRG_DEL',
         '16:00:00',
         '17:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_DEL',
+    ),
+    (
+        'SKRG_DEL',
         '17:00:00',
         '18:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_DEL',
+    ),
+    (
+        'SKRG_DEL',
         '18:00:00',
         '19:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_DEL',
+    ),
+    (
+        'SKRG_DEL',
         '19:00:00',
         '20:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_DEL',
+    ),
+    (
+        'SKRG_DEL',
         '20:00:00',
         '21:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_DEL',
+    ),
+    (
+        'SKRG_DEL',
         '21:00:00',
         '22:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_DEL',
+    ),
+    (
+        'SKRG_DEL',
         '22:00:00',
         '23:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_DEL',
+    ),
+    (
+        'SKRG_DEL',
         '23:00:00',
         '23:59:00',
         NULL,
         NULL
-    ), (
-        'SKBO_N_GND',
+    ),
+    (
+        'SKRG_GND',
         '15:00:00',
         '16:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_N_GND',
+    ),
+    (
+        'SKRG_GND',
         '16:00:00',
         '17:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_N_GND',
+    ),
+    (
+        'SKRG_GND',
         '17:00:00',
         '18:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_N_GND',
+    ),
+    (
+        'SKRG_GND',
         '18:00:00',
         '19:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_N_GND',
+    ),
+    (
+        'SKRG_GND',
         '19:00:00',
         '20:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_N_GND',
+    ),
+    (
+        'SKRG_GND',
         '20:00:00',
         '21:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_N_GND',
+    ),
+    (
+        'SKRG_GND',
         '21:00:00',
         '22:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_N_GND',
+    ),
+    (
+        'SKRG_GND',
         '22:00:00',
         '23:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_N_GND',
+    ),
+    (
+        'SKRG_GND',
         '23:00:00',
         '23:59:00',
         NULL,
         NULL
-    ), (
-        'SKBO_S_GND',
+    ),
+    (
+        'SKRG_TWR',
         '15:00:00',
         '16:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_S_GND',
+    ),
+    (
+        'SKRG_TWR',
         '16:00:00',
         '17:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_S_GND',
+    ),
+    (
+        'SKRG_TWR',
         '17:00:00',
         '18:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_S_GND',
+    ),
+    (
+        'SKRG_TWR',
         '18:00:00',
         '19:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_S_GND',
+    ),
+    (
+        'SKRG_TWR',
         '19:00:00',
         '20:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_S_GND',
+    ),
+    (
+        'SKRG_TWR',
         '20:00:00',
         '21:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_S_GND',
+    ),
+    (
+        'SKRG_TWR',
         '21:00:00',
         '22:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_S_GND',
+    ),
+    (
+        'SKRG_TWR',
         '22:00:00',
         '23:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_S_GND',
+    ),
+    (
+        'SKRG_TWR',
         '23:00:00',
         '23:59:00',
         NULL,
         NULL
-    ), (
-        'SKBO_TWR',
+    ),
+    (
+        'SKMD_S_APP',
         '15:00:00',
         '16:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_TWR',
+    ),
+    (
+        'SKMD_S_APP',
         '16:00:00',
         '17:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_TWR',
+    ),
+    (
+        'SKMD_S_APP',
         '17:00:00',
         '18:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_TWR',
+    ),
+    (
+        'SKMD_S_APP',
         '18:00:00',
         '19:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_TWR',
+    ),
+    (
+        'SKMD_S_APP',
         '19:00:00',
         '20:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_TWR',
+    ),
+    (
+        'SKMD_S_APP',
         '20:00:00',
         '21:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_TWR',
+    ),
+    (
+        'SKMD_S_APP',
         '21:00:00',
         '22:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_TWR',
+    ),
+    (
+        'SKMD_S_APP',
         '22:00:00',
         '23:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_TWR',
+    ),
+    (
+        'SKMD_S_APP',
         '23:00:00',
         '23:59:00',
         NULL,
         NULL
-    ), (
-        'SKBO_APP',
+    ),
+    (
+        'SKMD_N_APP',
         '15:00:00',
         '16:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_APP',
+    ),
+    (
+        'SKMD_N_APP',
         '16:00:00',
         '17:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_APP',
+    ),
+    (
+        'SKMD_N_APP',
         '17:00:00',
         '18:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_APP',
+    ),
+    (
+        'SKMD_N_APP',
         '18:00:00',
         '19:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_APP',
+    ),
+    (
+        'SKMD_N_APP',
         '19:00:00',
         '20:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_APP',
+    ),
+    (
+        'SKMD_N_APP',
         '20:00:00',
         '21:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_APP',
+    ),
+    (
+        'SKMD_N_APP',
         '21:00:00',
         '22:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_APP',
+    ),
+    (
+        'SKMD_N_APP',
         '22:00:00',
         '23:00:00',
         NULL,
         NULL
-    ), (
-        'SKBO_APP',
+    ),
+    (
+        'SKMD_N_APP',
         '23:00:00',
         '23:59:00',
         NULL,
         NULL
-    ), (
+    ),
+    (
         'SKED_CTR',
         '15:00:00',
         '16:00:00',
         NULL,
         NULL
-    ), (
+    ),
+    (
         'SKED_CTR',
         '16:00:00',
         '17:00:00',
         NULL,
         NULL
-    ), (
+    ),
+    (
         'SKED_CTR',
         '17:00:00',
         '18:00:00',
         NULL,
         NULL
-    ), (
+    ),
+    (
         'SKED_CTR',
         '18:00:00',
         '19:00:00',
         NULL,
         NULL
-    ), (
+    ),
+    (
         'SKED_CTR',
         '19:00:00',
         '20:00:00',
         NULL,
         NULL
-    ), (
+    ),
+    (
         'SKED_CTR',
         '20:00:00',
         '21:00:00',
         NULL,
         NULL
-    ), (
+    ),
+    (
         'SKED_CTR',
         '21:00:00',
         '22:00:00',
         NULL,
         NULL
-    ), (
+    ),
+    (
         'SKED_CTR',
         '22:00:00',
         '23:00:00',
         NULL,
         NULL
-    ), (
+    ),
+    (
         'SKED_CTR',
         '23:00:00',
         '23:59:00',
