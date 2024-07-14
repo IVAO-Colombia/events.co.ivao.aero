@@ -1,6 +1,6 @@
 <div class="flex flex-col mt-6">
 
-    @if ($modal)
+    {{-- @if ($modal)
     @component('components.pilot-confirm-booking', [
     "id" => $flight_id,
     "flight" => $flight,
@@ -15,7 +15,7 @@
     ])
 
     @endcomponent
-    @endif
+    @endif --}}
 
 
     <table class="min-w-full divide-y divide-gray-200">
