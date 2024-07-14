@@ -22,7 +22,7 @@ $total_flights_afe = 0;
 @endphp
 <div class="grid grid-cols-2 justify-items-center items-center">
     <div class="col-span-2">
-        <h1 class="descripRFE text-center text-3xl font-bold mb-5">{{__('Arrival statistics')}}</h1>
+        <h1 class="descripRFE text-center text-3xl font-bold mb-5">{{__('Departure statistics')}}</h1>
     </div>
     <div class="col-span-2">
         <div class="flex gap-6">
