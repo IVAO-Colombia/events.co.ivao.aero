@@ -43,8 +43,8 @@ class AtcBooking extends Component
             ['rating' => 4, 'name' => 'SKRG_DEL'],
             ['rating' => 5, 'name' => 'SKRG_GND'],
             ['rating' => 5, 'name' => 'SKRG_TWR'],
-            ['rating' => 6, 'name' => 'SKMD_S_APP'],
-            ['rating' => 6, 'name' => 'SKMD_N_APP'],
+            ['rating' => 5, 'name' => 'SKMD_S_APP'],
+            ['rating' => 5, 'name' => 'SKMD_N_APP'],
             ['rating' => 7, 'name' => 'SKED_CTR'],
         ];
 

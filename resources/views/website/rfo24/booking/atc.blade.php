@@ -68,4 +68,12 @@
         @include('website.rfo24.widgets.booking.atc_list')
         <div class="clearfix" style="height: 2rem">
         </div>
+        <div class="">
+            <div class="col-md-12 text-center my-3 font-semibold text-xl">
+                <h1>Entre las 15z y las 19:59 usuarios con rango ADC podrán reservar en posición de SKMD_S_APP Y
+                    SKMD_N_APP</h1>
+            </div>
+        </div>
+        <div class="clearfix" style="height: 2rem">
+        </div>
     </div>
