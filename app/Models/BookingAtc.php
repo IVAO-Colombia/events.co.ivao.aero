@@ -16,7 +16,7 @@ class BookingAtc extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    public function getBookingByVID($id)
+    public static function getBookingByVID($id)
     {
         return BookingAtc::where('user_id', $id)
             ->get();

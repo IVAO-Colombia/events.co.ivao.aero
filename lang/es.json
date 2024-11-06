@@ -16,7 +16,7 @@
     "Brefing": "Brefing",
     "Airline": "Aerolinea",
     "Flight": "Vuelo",
-    "Aircraft": "Avion",
+    "Aircraft": "Aeronave",
     "Origin": "Origen",
     "Arrival": "Llegada",
     "Departure Time": "Hora de salida",
@@ -45,5 +45,11 @@
     "Arrival statistics": "Estadisticas de llegadas",
     "Departure statistics": "Estadisticas de salidas",
     "Booked flights": "Vuelos reservados",
-    "Available flights": "Vuelos libres"
+    "Arrivals": "Llegadas",
+    "Departures": "Salidas",
+    "Book now": "Reservar ahora",
+    "You don't have any booking": "No tienes ninguna reserva actualmente",
+    "Once you've added a reservation, you can come back here anytime to review all the details of your flight.": "Una vez que hayas agregado una reserva, podrás regresar aquí en cualquier momento para revisar todos los detalles de tu vuelo.",
+    "Available flights": "Vuelos libres",
+    "Before the event, we will hold a briefing on our Discord and/or social media channels.": "Antes del evento, realizaremos un briefing en nuestro Discord y/o en nuestras redes sociales."
 }

@@ -11,7 +11,20 @@ class Flights extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'flight', 'type', 'airline', 'departure', 'departure_gate', 'route', 'destination', 'destination_gate', 'aircraft', 'departure_time', 'arrival_time', 'information', 'user_id'
+        'id',
+        'flight',
+        'type',
+        'airline',
+        'departure',
+        'departure_gate',
+        'route',
+        'destination',
+        'destination_gate',
+        'aircraft',
+        'departure_time',
+        'arrival_time',
+        'information',
+        'user_id'
     ];
 
     public function getOACIAirline()
@@ -56,7 +69,7 @@ class Flights extends Model
             ->get();
     }
 
-    public function getBookingByVID($vid)
+    public static function getBookingByVID($vid)
     {
         return Flights::where('user_id', $vid)
             ->get();

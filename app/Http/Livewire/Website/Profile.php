@@ -8,17 +8,19 @@ use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
-#[Layout('website.rfo24.template')]
+#[Layout('website.rfe24.template')]
 
 class Profile extends Component
 {
+    public $flights, $atc;
     public function render()
     {
-        $flights = new Flights;
-        $atc = new BookingAtc;
-        return view('website.rfo24.profile.view', [
-            "flights" => $flights->getBookingByVID(Auth::user()->vid),
-            "bookingsAtc" => $atc->getBookingByVID(Auth::user()->id),
+        $this->flights = Flights::getBookingByVID(Auth::user()->vid);
+        $this->atc = BookingAtc::getBookingByVID(Auth::user()->id);
+
+        return view('website.rfe24.profile.view', [
+            "flights" => $this->flights,
+            "bookingsAtc" => $this->atc,
         ]);
     }
 

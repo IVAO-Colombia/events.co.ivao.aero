@@ -6,10 +6,13 @@ use App\Models\Flights;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
+use Livewire\Features\SupportPagination\WithoutUrlPagination;
+use Livewire\WithPagination;
 
-#[Layout('website.rfo24.template')]
+#[Layout('website.rfe24.template')]
 class Flight extends Component
 {
+    use WithPagination, WithoutUrlPagination;
 
     public $flightModel;
     public $flight_id,
@@ -24,51 +27,85 @@ class Flight extends Component
         $arrival_time,
         $information;
 
-    public $search = "",
-        $sort_id = "id",
-        $sort = "desc",
-        $type = "",
-        $modal = false;
+    public $sort_by = "id",
+        $sort = "ASC",
+        $type = "";
+
+    public $modal = false;
+
+    public function boot()
+    {
+        $this->dispatch('update-aos');
+    }
 
     public function render()
     {
-        $flights = new Flights;
+        $flightQuery = Flights::query()->orderBy($this->sort_by, $this->sort);
 
-        return view('website.rfo24.booking.flights', [
-            'departureFlights' => $flights->getDepartureFlights("SKRG"),
-            'arrivalFlights' => $flights->getArrivalFlights("SKRG"),
-            'flights' => Flights::all(),
+        if ($this->type) {
+            $flightQuery->where('type', $this->type);
+        }
+
+        $flights = $flightQuery->paginate(25);
+
+        return view('website.rfe24.booking.flights', [
+            'flights' => $flights,
         ]);
     }
 
-
     public function resetSearch()
     {
-        $this->search = "";
-        $this->sort_id = "id";
-        $this->sort = "desc";
+        $this->sort_by = "id";
+        $this->sort = "ASC";
         $this->type = "";
         $this->modal = false;
     }
 
-    public function closeModal()
+    public function toggleModal()
     {
-        $this->modal = false;
-    }
-
-    public function openModal()
-    {
-        $this->modal = true;
+        $this->modal = !$this->modal;
     }
 
     public function ArrivalFlights()
     {
-        $this->type = "arr";
+        $this->type = "arrival";
     }
 
     public function DepartureFlights()
     {
-        $this->type = "dpt";
+        $this->type = "departure";
+    }
+
+    public function departureTime()
+    {
+
+        if ($this->sort_by == "departure_time" && $this->sort == "ASC") {
+            $this->sort = "DESC";
+        } else {
+            $this->sort_by = "departure_time";
+            $this->sort = "ASC";
+        }
+    }
+
+    public function ArrivalTime()
+    {
+
+        if ($this->sort_by == "arrival_time" && $this->sort == "ASC") {
+            $this->sort = "DESC";
+        } else {
+            $this->sort_by = "arrival_time";
+            $this->sort = "ASC";
+        }
+    }
+
+    public function sortAsc()
+    {
+        $this->sort = "ASC";
+    }
+
+    public function sortDecs()
+    {
+        $this->sort = "DESC";
     }
 
     public function showConfirm($id)
@@ -87,7 +124,7 @@ class Flight extends Component
         $this->arrival_time = $this->flightModel->arrival_time;
         $this->information = $this->flightModel->information;
 
-        $this->openModal();
+        $this->toggleModal();
     }
 
     public function reserve($id)
@@ -105,7 +142,7 @@ class Flight extends Component
             return route('home');
         }
 
-        $this->closeModal();
+        $this->toggleModal();
         return redirect()->back()->with("message", "Se ha reservado correctamente!");
     }
 }

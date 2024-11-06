@@ -5,11 +5,11 @@ namespace App\Http\Livewire\Website;
 use Livewire\Attributes\Layout;
 use Livewire\Component;
 
-#[Layout('website.rfo24.template')]
+#[Layout('website.rfe24.template')]
 class Home extends Component
 {
     public function render()
     {
-        return view('website.rfo24.index');
+        return view('website.rfe24.index');
     }
 }
