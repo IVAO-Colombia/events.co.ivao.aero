@@ -34,6 +34,7 @@
             @include('website.rfe24.widgets.statics.all_flights')
             @include('website.rfe24.widgets.statics.arr_flights')
             @include('website.rfe24.widgets.statics.dep_flights')
+            @include('website.rfe24.widgets.statics.bar_flights')
         </div>
     </div>
 
