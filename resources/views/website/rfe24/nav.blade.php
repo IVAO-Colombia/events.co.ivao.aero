@@ -215,7 +215,7 @@
                                 </div>
                             </li> --}}
                             <li>
-                                <a href="https://forum.ivao.aero/threads/rfo-rionegro-2024.379641/" target="_blank"
+                                <a href="{{asset('assets/docs/RFESKBO2024_Pilot Briefing.pdf')}}" target="_blank"
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{__('Brefing')}}</a>
                             </li>
                         </ul>
@@ -238,7 +238,7 @@
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{__('Book')}}</a>
                             </li>
                             <li>
-                                <a href="https://forum.ivao.aero/threads/rfo-rionegro-2024.379641/" target="_blank"
+                                <a href="{{asset('assets/docs/RFESKBO2024_ATC Briefing.pdf')}}" target="_blank"
                                     class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{__('Brefing')}}</a>
                             </li>
                         </ul>
