@@ -43,7 +43,7 @@ class AtcBooking extends Component
             // Delivery
             ['rating' => 5, 'name' => 'SKBO_DEL'],
             // Ground
-            ['rating' => 4, 'name' => 'SKBO_S_GND'],
+            ['rating' => 5, 'name' => 'SKBO_S_GND'],
             ['rating' => 5, 'name' => 'SKBO_N_GND'],
             // Tower
             ['rating' => 5, 'name' => 'SKBO_N_TWR'],
